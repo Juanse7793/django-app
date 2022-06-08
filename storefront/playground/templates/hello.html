@@ -1,8 +1,19 @@
-{%if name%}
-<h1>Hola {{name}}</h1>
-{%else%}
-<h1>Hello World</h1>
-{%endif%}
+<html>
+  <head>
+    <title>Hello</title>
+  </head>
+  <body>
+    {%if name%}
+    <h1>Hola {{name}}</h1>
+    {%else%}
+    <h1>Hello World</h1>
+    {%endif%}
+    <p>
+        This is a template for a simple hello world application.
+    </p>
+  </body>
+</html>
+
 
 <!-- no se usa mucho templates en Django seguramente es porque se usa Django
 para hacer APIs -->
