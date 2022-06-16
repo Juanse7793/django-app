@@ -52,7 +52,7 @@ class Adress(models.Model):
 
     # mistake in commit message customer-adress was one to one relationship
 
-class Item(models.Model):
+class OrderItem(models.Model):
     quantity = models.PositiveSmallIntegerField()
     product = models.ForeignKey(Product, on_delete=models.PROTECT)
     order = models.ForeignKey(Orders, on_delete=models.PROTECT)
