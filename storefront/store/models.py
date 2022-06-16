@@ -42,4 +42,5 @@ class Adress(models.Model):
     street = models.CharField(max_length=255)
     city = models.CharField(max_length=255)
     customer = models.OneToOneField(Customer, on_delete=models.CASCADE, primary_key=True)
-    
+
+    # mistake in commit message customer-adress was one to one relationship
