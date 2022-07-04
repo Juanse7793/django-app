@@ -1,6 +1,13 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+import pkg_resources
+from store.models import Product
 
-# Create your views here.
+
+
+
 def say_hello(request):
-    return render(request, 'hello.html', {'name': 'Juancho'})
+    query_set = Product.objects.filter(title__icontains='coffee')
+    
+
+    return render(request, 'hello.html', {'name': 'Juan', 'products': query_set})
