@@ -17,6 +17,7 @@ class CustomerAdmin(admin.ModelAdmin):
 @admin.register(models.Product)
 class ProductAdmin(admin.ModelAdmin):
     list_display = ['title', 'unit_price', 'inventory_status', 'collection']
+    list_filter = ['collection', 'last_update']
     list_editable = ['unit_price']
     list_per_page: int = 10
 
